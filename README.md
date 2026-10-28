@@ -7,7 +7,7 @@ The translation is performed by [this script](https://github.com/nestoris/icon-t
 
 ## How to use:
 ```
-git cone https://github.com/nestoris/icon-theme-toolkit_beta.git
+git clone https://github.com/nestoris/icon-theme-toolkit_beta.git
 cd icon-theme-toolkit_beta
 gjs icon-theme-toolkit.js
 ```
