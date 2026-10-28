@@ -26,6 +26,10 @@ Theme tools overal:
 
 ![Theme tools](tools.png)
 
+Selective removing tool:
+
+![Remove tool](remove-tool.png)
+
 ICO export tool:
 
 ![ICO export tool](ico-export.png)
