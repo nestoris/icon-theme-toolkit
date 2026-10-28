@@ -1,7 +1,7 @@
-# icon-theme-toolkit_beta
+# Icon Theme Toolkit (English beta)
 
 ## Description:
-English version of [icon-theme-toolkit](https://github.com/nestoris/icon-theme-toolkit) for international beta-testers
+English version of [icon-theme-toolkit](https://github.com/nestoris/icon-theme-toolkit) for international beta-testers.
 
 The translation is performed by [this script](https://github.com/nestoris/icon-theme-toolkit/blob/main/translate.awk), and it might have missed something.
 
