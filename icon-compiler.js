@@ -468,7 +468,7 @@ for (let i = 0; i < args.length; i++) {
     } else if (a.indexOf('--themefile=') === 0) {
         themefileArg = a.substring(12);
     } else if (a === '--help' || a === '-h') {
-        print('Использование: icon-compiler.js [--name=NAME.ico] [--context=CTX] ' +
+        print('Usage: icon-compiler.js [--name=NAME.ico] [--context=CTX] ' +
               '[--themefile=PATH] file1.png file2.png ...');
         imports.system.exit(0);
     } else if (a.charAt(0) !== '-') {

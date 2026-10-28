@@ -14,14 +14,14 @@ Gtk.init(null);
 let scriptName = GLib.path_get_basename(imports.system.programInvocationName);
 
 if (ARGV.includes('-h') || ARGV.includes('--help')) {
-    print("Использование: " + GLib.path_get_basename(ARGV[0]) + " [ОПЦИИ] [ICO_ФАЙЛ]\n");
+    print("Usage: " + GLib.path_get_basename(ARGV[0]) + " [ОПЦИИ] [ICO_FILE]\n");
     print("View icons from ICO files and install into Linux theme.");
     print("");
     print("Options:");
-    print("  -t ФАЙЛ       Path to theme index.theme file");
-    print("  -c КОНТЕКСТ   Context to select (actions, devices, mimetypes, places, etc.)");
-    print("  -n ИМЯ        Icon name without extension");
-    print("  -s РАЗМЕР     Icon display size in pixels (default: original)");
+    print("  -t FILE       Path to theme index.theme file");
+    print("  -c CONTEXT   Context to select (actions, devices, mimetypes, places, etc.)");
+    print("  -n NAME        Icon name without extension");
+    print("  -s SIZE     Icon display size in pixels (default: original)");
     print("  -b            Enable smoothing (bilinear interpolation) when scaling");
     print("  -h, --help    Show this help and exit");
     print("");
@@ -38,9 +38,9 @@ if (ARGV.includes('-h') || ARGV.includes('--help')) {
     print("");
     print("INI file format (created next to ICO):");
     print("  [defaults]");
-    print("  name=иконка");
+    print("  name=icon");
     print("  context=devices");
-    print("  themefile=/путь/к/index.theme");
+    print("  themefile=/path/to/index.theme");
     print("  scale=128        # display size (optional)");
     print("  blur=true        # scaling smoothing (optional)");
     print("");
@@ -552,7 +552,7 @@ topHbox.pack_start(saveIniButton, false, false, 0);
 topHbox.pack_start(searchEntry, true, true, 0);
 topHbox.pack_start(contextComboBox, false, false, 0);
 
-// ==================== ФУНКЦИИ ВЫБОРА КОНТЕКСТА ====================
+// ==================== ФУНКЦИИ ВЫБОРА CONTEXTА ====================
 
 function selectContext(contextName) {
     if (!contextName || !dirArray[contextName]) {
