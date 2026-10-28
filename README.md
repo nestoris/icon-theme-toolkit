@@ -3,8 +3,14 @@ English version of [icon-theme-toolkit](https://github.com/nestoris/icon-theme-t
 
 Screenshots:
 
-![](comparison.png)
+![Icon themes comparison tab](comparison.png)
 
-![](theme-editor.png)
+![index.theme editing tab](theme-editor.png)
 
-![](tools.png)
+![Theme tools](tools.png)
+
+![ICO export tool](ico-export.png)
+
+![ICO import tool](ico-import.png)
+
+![Symlink matrix tool](symlink-matrix.png)
