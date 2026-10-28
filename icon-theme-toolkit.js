@@ -1112,7 +1112,7 @@ class MainWindow {
         targetCombo.set_hexpand(true);
         topBox.pack_start(targetCombo, true, true, 0);
         
-        let chkShowSymlinks = new Gtk.CheckButton({ label: "Показывать symlinkи" });
+        let chkShowSymlinks = new Gtk.CheckButton({ label: "Show symlinks" });
         topBox.pack_start(chkShowSymlinks, false, false, 0);
         
         content.pack_start(topBox, false, false, 0);
@@ -1905,8 +1905,8 @@ class MainWindow {
         });
         filterBox.pack_start(this.toolsFilterEntry, true, true, 0);
 
-        this.toolsShowAllChk = new Gtk.CheckButton({ label: "Показать все" });
-        this.toolsShowAllChk.set_tooltip_text("Показывать все имена в теме, включая те, которые состоят только of symlinkов (без физических оригиналов).");
+        this.toolsShowAllChk = new Gtk.CheckButton({ label: "Show all" });
+        this.toolsShowAllChk.set_tooltip_text("Show all names in the topic, including those that consist solely of symlinks (without the actual original files).");
         this.toolsShowAllChk.connect('toggled', () => {
             this.populateToolsMasterStore(); // Пересобираем таблицу при переключении
         });
@@ -1983,7 +1983,7 @@ class MainWindow {
         btnMove.connect('clicked', () => this.showMoveCopyDialog());
         toolbar.pack_start(btnMove, false, false, 0);
 
-        let btnLink = new Gtk.Button({ image: Gtk.Image.new_from_icon_name("insert-link-symbolic", Gtk.IconSize.BUTTON), tooltip_text: "Сделать symlinkом / Оригиналом" });
+        let btnLink = new Gtk.Button({ image: Gtk.Image.new_from_icon_name("insert-link-symbolic", Gtk.IconSize.BUTTON), tooltip_text: "Make a symlink / Original" });
         btnLink.connect('clicked', () => this.showCreateSymlinksDialog());
         toolbar.pack_start(btnLink, false, false, 0);
 
@@ -3287,7 +3287,7 @@ class MainWindow {
             transient_for: this.window, modal: true, default_width: 450
         });
         dialog.add_button("Cancel", Gtk.ResponseType.CANCEL);
-        dialog.add_button("Создать", Gtk.ResponseType.OK);
+        dialog.add_button("Create", Gtk.ResponseType.OK);
         
         let content = dialog.get_content_area();
         content.set_spacing(10);
@@ -4080,7 +4080,7 @@ class MainWindow {
         
         let view = new Gtk.TreeView({ model: store });
         let renderer = new Gtk.CellRendererText();
-        let col = new Gtk.TreeViewColumn({ title: "Элементы (сверху вниз)", expand: true });
+        let col = new Gtk.TreeViewColumn({ title: "Elements (from top to bottom)", expand: true });
         col.pack_start(renderer, true);
         col.add_attribute(renderer, 'text', 0);
         view.append_column(col);
@@ -4626,7 +4626,7 @@ class MainWindow {
         
         for (let [name, occs] of this.theme.icons) {
             let hasOriginal = occs.some(o => !o.isSymlink);
-            // Если включен "Показать все" ИЛИ у имени есть оригиналы — добавляем
+            // Если включен "Show all" ИЛИ у имени есть оригиналы — добавляем
             if (showAll || hasOriginal) {
                 names.add(name);
             }
