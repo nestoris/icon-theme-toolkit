@@ -266,7 +266,7 @@ var Theme = class Theme {
 
                     let baseName = fileName.substring(0, dotIdx);
                     if (baseName.includes(' ')) {
-                        this.problems.push({ type: 'error', line: lineNum, dirName: dirName, probType: 'spaces_file', msg: `Файл "${fileName}" contains spaces.` });
+                        this.problems.push({ type: 'error', line: lineNum, dirName: dirName, probType: 'spaces_file', msg: `File "${fileName}" contains spaces.` });
                     }
 
                     let isSymlink = fileInfo.get_is_symlink();

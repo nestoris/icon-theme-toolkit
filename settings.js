@@ -36,7 +36,7 @@ var Settings = class Settings {
 
             try { this.mainThemePath = kf.get_string('main', 'theme_path') || ''; } catch (e) {}
         } catch (e) {
-            // Файла нет — используем значения по умолчанию
+            // Fileа нет — используем значения по умолчанию
         }
     }
 

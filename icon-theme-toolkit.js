@@ -1349,6 +1349,63 @@ class MainWindow {
         }
     }
 
+    runIcoCompiler() {
+        if (!this.toolsCurrentSelected) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.WARNING, buttons: Gtk.ButtonsType.OK, text: "Сначала выберите имя значка в левой таблице." });
+            msg.run(); msg.destroy(); return;
+        }
+
+        let name = this.toolsCurrentSelected;
+        let occs = this.theme.icons.get(name) || [];
+        
+        let pngPaths = [];
+        for (let o of occs) {
+            if (!o.isSymlink) pngPaths.push(o.fullPath);
+        }
+
+        if (pngPaths.length === 0) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.WARNING, buttons: Gtk.ButtonsType.OK, text: "У этого значка нет физических fileов (только symlinkи)." });
+            msg.run(); msg.destroy(); return;
+        }
+
+        let script = GLib.build_filenamev([here, 'icon-compiler.js']);
+        if (!Gio.File.new_for_path(script).query_exists(null)) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: "icon-compiler.js script not found in program folder." });
+            msg.run(); msg.destroy(); return;
+        }
+
+        let cmd = ['gjs', script, '--name=' + name + '.ico', '--themefile=' + this.theme.indexPath];
+        
+        // Передаем контекст, если он один
+        let contexts = new Set(occs.map(o => o.context).filter(Boolean));
+        if (contexts.size === 1) cmd.push('--context=' + Array.from(contexts)[0]);
+
+        for (let p of pngPaths) cmd.push(p);
+
+        try {
+            GLib.spawn_async(null, cmd, null, GLib.SpawnFlags.SEARCH_PATH | GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
+        } catch (e) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: "Launch error: " + e.message });
+            msg.run(); msg.destroy();
+        }
+    }
+
+    runIcoInstaller() {
+        let script = GLib.build_filenamev([here, 'winico2linuxtheme.js']);
+        if (!Gio.File.new_for_path(script).query_exists(null)) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: "winico2linuxtheme.js script not found in program folder." });
+            msg.run(); msg.destroy(); return;
+        }
+
+        let cmd = ['gjs', script, '-t', this.theme.indexPath];
+        try {
+            GLib.spawn_async(null, cmd, null, GLib.SpawnFlags.SEARCH_PATH | GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
+        } catch (e) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: "Launch error: " + e.message });
+            msg.run(); msg.destroy();
+        }
+    }
+
     async applyMatrixChanges(store, selectedNames, nameContexts, targetName) {
         let toCreate = [];
         let toDelete = [];
@@ -1833,11 +1890,20 @@ class MainWindow {
         
         let filterBox = new Gtk.Box({ orientation: Gtk.Orientation.HORIZONTAL, spacing: 5 });
         filterBox.pack_start(new Gtk.Label({ label: "Filter:" }), false, false, 0);
+        
         this.toolsFilterEntry = new Gtk.Entry({ placeholder_text: "Search by name...", hexpand: true });
         this.toolsFilterEntry.connect('changed', () => {
             if (this.toolsFilterModel) this.toolsFilterModel.refilter();
         });
         filterBox.pack_start(this.toolsFilterEntry, true, true, 0);
+
+        this.toolsShowAllChk = new Gtk.CheckButton({ label: "Показать все" });
+        this.toolsShowAllChk.set_tooltip_text("Показывать все имена в теме, включая те, которые состоят только of symlinkов (без физических оригиналов).");
+        this.toolsShowAllChk.connect('toggled', () => {
+            this.populateToolsMasterStore(); // Пересобираем таблицу при переключении
+        });
+        filterBox.pack_start(this.toolsShowAllChk, false, false, 0);
+
         leftBox.pack_start(filterBox, false, false, 0);
 
         // Модель левой панели: [0-Preview, 1-Name, 2-Context, 3-Count symlinkов, 4-Status, 5-Цвет, 6-Name(поиск)]
@@ -1909,13 +1975,19 @@ class MainWindow {
         btnMove.connect('clicked', () => this.showMoveCopyDialog());
         toolbar.pack_start(btnMove, false, false, 0);
 
-        let btnLink = new Gtk.Button({ 
-            image: Gtk.Image.new_from_icon_name("insert-link-symbolic", Gtk.IconSize.BUTTON), 
-            tooltip_text: "Сделать symlinkом / Оригиналом" 
-        });
+        let btnLink = new Gtk.Button({ image: Gtk.Image.new_from_icon_name("insert-link-symbolic", Gtk.IconSize.BUTTON), tooltip_text: "Сделать symlinkом / Оригиналом" });
         btnLink.connect('clicked', () => this.showCreateSymlinksDialog());
         toolbar.pack_start(btnLink, false, false, 0);
 
+        // НОВЫЕ КНОПКИ: Экспорт и Импорт ICO
+        let btnIcoOut = new Gtk.Button({ image: Gtk.Image.new_from_icon_name("document-export-symbolic", Gtk.IconSize.BUTTON), tooltip_text: "Save to ICO..." });
+        btnIcoOut.connect('clicked', () => this.runIcoCompiler());
+        toolbar.pack_start(btnIcoOut, false, false, 0);
+
+        let btnIcoIn = new Gtk.Button({ image: Gtk.Image.new_from_icon_name("document-import-symbolic", Gtk.IconSize.BUTTON), tooltip_text: "Import from ICO..." });
+        btnIcoIn.connect('clicked', () => this.runIcoInstaller());
+        toolbar.pack_start(btnIcoIn, false, false, 0);
+        
         leftBox.pack_start(toolbar, false, false, 0);
         paned.pack1(leftBox, true, false);
 
@@ -2429,7 +2501,7 @@ class MainWindow {
             modal: true
         });
         dialog.add_button('Cancel', Gtk.ResponseType.CANCEL);
-        dialog.add_button('Add', Gtk.ResponseType.OK);
+        dialog.add_button('Добавить', Gtk.ResponseType.OK);
         
         if (dialog.run() === Gtk.ResponseType.OK) {
             let path = dialog.get_filename();
@@ -2616,6 +2688,28 @@ class MainWindow {
             let itDir = new Gtk.MenuItem({ label: 'Open directory' });
             itDir.connect('activate', () => openPathWithDefault(t.themeDir));
             menu.append(itDir);
+
+            // НОВЫЙ ПУНКТ: Перезагрузить
+            let itReload = new Gtk.MenuItem({ label: 'Reload theme' });
+            itReload.connect('activate', async () => {
+                // Очищаем кэш в памяти, чтобы принудительно перечитать с диска
+                t.isLoaded = false; 
+                t.icons.clear();
+                t.directories = [];
+                t.dirInfo.clear();
+                
+                let progress = new ProgressDialog(this.window, 'Перезагрузка', `Перезагрузка ${t.name}...`);
+                await t.load(progress);
+                progress.close();
+                
+                this.rebuildComparisonAsync(null);
+                this.populateToolsMasterStore();
+                
+                if (this.theme === t) {
+                    await this.loadThemeData(t.indexPath, true);
+                }
+            });
+            menu.append(itReload);
             
             let itMain = new Gtk.MenuItem({ label: 'Make main' });
             itMain.set_sensitive(!t.isMain);
@@ -3956,7 +4050,7 @@ class MainWindow {
         
         let view = new Gtk.TreeView({ model: store });
         let renderer = new Gtk.CellRendererText();
-        let col = new Gtk.TreeViewColumn({ title: "Items (top to bottom)", expand: true });
+        let col = new Gtk.TreeViewColumn({ title: "Элементы (сверху вниз)", expand: true });
         col.pack_start(renderer, true);
         col.add_attribute(renderer, 'text', 0);
         view.append_column(col);
@@ -4054,7 +4148,7 @@ class MainWindow {
         let entry = new Gtk.Entry({ placeholder_text: "Add...", hexpand: true });
         
         let btnAdd = new Gtk.Button({ 
-            label: "Add",
+            label: "Добавить",
             image: Gtk.Image.new_from_icon_name("list-add-symbolic", Gtk.IconSize.BUTTON),
             always_show_image: true
         });
@@ -4487,11 +4581,16 @@ class MainWindow {
             }
         }
 
-        // 2. Собираем имена для левой таблицы (только те, у которых есть оригиналы)
+        // 2. Собираем имена для левой таблицы
         let names = new Set();
+        let showAll = this.toolsShowAllChk ? this.toolsShowAllChk.get_active() : false;
+        
         for (let [name, occs] of this.theme.icons) {
             let hasOriginal = occs.some(o => !o.isSymlink);
-            if (hasOriginal) names.add(name);
+            // Если включен "Показать все" ИЛИ у имени есть оригиналы — добавляем
+            if (showAll || hasOriginal) {
+                names.add(name);
+            }
         }
 
         let sortedNames = Array.from(names).sort();
