@@ -486,7 +486,7 @@ let displayScale = null;  // Size отображения значков
 let useBlur = false;     // Использовать ли сглаживание
 
 let window = new Gtk.Window({
-    title: "Установщик значков",
+    title: "Windows .ICO to Linux theme installer",
     default_width: 1000,
     default_height: 700,
     border_width: 10
