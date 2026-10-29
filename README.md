@@ -41,3 +41,8 @@ ICO import tool:
 Symlink matrix tool:
 
 ![Symlink matrix tool](symlink-matrix.png)
+
+In-table symlink editing/creaing:
+
+![In-table editing](in-table-symlink.png)
+
