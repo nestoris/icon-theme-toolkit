@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Icon Theme Toolkit
+Comment=Toolkit for creating and editing Linux icon themes
+Exec=icon-theme-toolkit %f
+Icon=preferences-desktop-theme
+Terminal=false
+Categories=Graphics;Development;
+MimeType=inode/directory;
+Keywords=icon;theme;svg;png;symlink;
+StartupNotify=true
