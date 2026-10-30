@@ -62,7 +62,7 @@ function haveIcotool() {
 // ================= ГЛУБИНА ЦВЕТА =================
 
 const BIT_DEPTHS = [
-    { value: 1,  label: 'Моно' },
+    { value: 1,  label: 'Mono' },
     { value: 4,  label: '16' },
     { value: 8,  label: '256' },
     { value: 16, label: 'HiColor' },
@@ -293,8 +293,8 @@ class IconCompilerWindow {
 
         this.makeIni = new Gtk.CheckButton({ label: 'Create also .ini file', active: true });
         this.makeIni.set_tooltip_text(
-            'Save рядом с ICO .ini в формате winico2linuxtheme ' +
-            '(секции [defaults] и [bit-depth]).');
+            'Save next to the .ico file in the winico2linuxtheme format ' +
+            '(sections [defaults] and [bit-depth]).');
         bottom.pack_start(this.makeIni, false, false, 0);
 
         bottom.pack_start(new Gtk.Label({ label: '' }), true, true, 0);

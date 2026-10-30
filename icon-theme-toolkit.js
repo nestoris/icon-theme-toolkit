@@ -1006,6 +1006,15 @@ class MainWindow {
         btnAdd.connect('clicked', () => this.showAddSymlinkDialog(targetName));
         sideBox.pack_start(btnAdd, false, false, 0);
 
+        // НОВАЯ КНОПКА УДАЛЕНИЯ
+        let btnDeleteRow = new Gtk.Button({ 
+            image: Gtk.Image.new_from_icon_name("user-trash-symbolic", Gtk.IconSize.BUTTON), 
+            tooltip_text: "Physically delete files and symlinks for the selected name" 
+        });
+        btnDeleteRow.get_style_context().add_class("destructive-action");
+        btnDeleteRow.connect('clicked', () => this.deleteMatrixRow(view, store));
+        sideBox.pack_start(btnDeleteRow, false, false, 0);
+
         let btnEdit = new Gtk.Button({ image: Gtk.Image.new_from_icon_name("document-edit-symbolic", Gtk.IconSize.BUTTON), tooltip_text: "Edit existing symlinks..." });
         btnEdit.connect('clicked', () => {
             let [ok, model, iter] = view.get_selection().get_selected();
@@ -1237,6 +1246,53 @@ class MainWindow {
             }
             confirm.destroy();
             this.loadThemeData(this.theme.themePath, true);
+        } else {
+            confirm.destroy();
+        }
+    }
+
+    deleteMatrixRow(view, store) {
+        let [ok, model, iter] = view.get_selection().get_selected();
+        if (!ok || !iter) {
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.WARNING, buttons: Gtk.ButtonsType.OK, text: "First, select the row with the name in the table." });
+            msg.run(); msg.destroy(); return;
+        }
+
+        let sName = model.get_value(iter, 0);
+        let sOccs = this.theme.icons.get(sName) || [];
+        
+        if (sOccs.length === 0) return;
+
+        let confirm = new Gtk.MessageDialog({ 
+            transient_for: this.window, modal: true, message_type: Gtk.MessageType.QUESTION, 
+            buttons: Gtk.ButtonsType.YES_NO, 
+            text: `Delete ALL files and symlinks for the name "${sName}"?\n\nNumber of objects to be deleted: ${sOccs.length}. This action cannot be undone.` 
+        });
+        
+        if (confirm.run() === Gtk.ResponseType.YES) {
+            let errors = 0;
+            let deleted = 0;
+            
+            for (let o of sOccs) {
+                try {
+                    Gio.File.new_for_path(o.fullPath).delete(null);
+                    deleted++;
+                } catch (e) {
+                    errors++;
+                    print("Error deleting " + o.fullPath + ": " + e.message);
+                }
+            }
+            
+            confirm.destroy();
+            
+            if (errors > 0) {
+                let errDlg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: `Deleted: ${deleted}\nErrors: ${errors}` });
+                errDlg.run(); errDlg.destroy();
+            }
+            
+            if (deleted > 0) {
+                this.loadThemeData(this.theme.themePath, true);
+            }
         } else {
             confirm.destroy();
         }
@@ -1912,7 +1968,7 @@ class MainWindow {
 
         let script = GLib.build_filenamev([here, 'winico2linuxtheme.js']);
         if (!Gio.File.new_for_path(script).query_exists(null)) {
-            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: "winico2linuxtheme.js script not found in program folder." });
+            let msg = new Gtk.MessageDialog({ transient_for: this.window, modal: true, message_type: Gtk.MessageType.ERROR, buttons: Gtk.ButtonsType.OK, text: "winico2linuxtheme.js script not found in the program folder." });
             msg.run(); msg.destroy(); return;
         }
 

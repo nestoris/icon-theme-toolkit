@@ -43,7 +43,7 @@ var Theme = class Theme {
             return false;
         }
 
-        if (progress) progress.setStatus(0.1, 'Парсинг index.theme...');
+        if (progress) progress.setStatus(0.1, 'Parsing index.theme...');
         this._parseIndexTheme();
         
         // Проверка на тему курсоров (если нет секций каталогов, но есть cursors)
@@ -64,7 +64,7 @@ var Theme = class Theme {
         }
         
         this.isLoaded = true;
-        if (progress) progress.setStatus(1.0, 'Готово');
+        if (progress) progress.setStatus(1.0, 'Done');
         return true;
     }
 

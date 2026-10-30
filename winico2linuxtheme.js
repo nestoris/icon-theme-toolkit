@@ -14,7 +14,7 @@ Gtk.init(null);
 let scriptName = GLib.path_get_basename(imports.system.programInvocationName);
 
 if (ARGV.includes('-h') || ARGV.includes('--help')) {
-    print("Usage: " + GLib.path_get_basename(ARGV[0]) + " [ОПЦИИ] [ICO_FILE]\n");
+    print("Usage: " + GLib.path_get_basename(ARGV[0]) + " [OPTIONS] [ICO_FILE]\n");
     print("View icons from ICO files and install into Linux theme.");
     print("");
     print("Options:");
@@ -28,7 +28,7 @@ if (ARGV.includes('-h') || ARGV.includes('--help')) {
     print("Arguments:");
     print("  ICO_FILE      Path to .ico file to open");
     print("");
-    print("Примеры:");
+    print("Examples:");
     print("  " + scriptName + " icon.ico");
     print("  " + scriptName + " -t /path/to/index.theme -c devices icon.ico");
     print("  " + scriptName + " -t theme/index.theme -c actions -n my-icon icon.ico");
@@ -1012,7 +1012,7 @@ function loadIcoWithIni(filePath) {
         if (contextToSet) {
             // Если в ini записан Context (например, Applications), а папка называется иначе (apps)
             if (window.contextMap && window.contextMap[contextToSet]) {
-                print("Context '" + contextToSet + "' сопоставлен с папкой '" + window.contextMap[contextToSet] + "'");
+                print("Context '" + contextToSet + "' mapped to folder '" + window.contextMap[contextToSet] + "'");
                 contextToSet = window.contextMap[contextToSet];
             }
 
@@ -1068,7 +1068,7 @@ function loadIcoWithIni(filePath) {
 
 function loadThemeFile(filePath) {
     themeFilePath = filePath;
-    print("Загружена тема: " + themeFilePath);
+    print("Theme loaded: " + themeFilePath);
     
     themeBasePath = getThemeBasePath(themeFilePath);
     
@@ -1168,7 +1168,7 @@ function updateContextComboBox() {
         contextComboBox.set_active(index);
         currentContext = targetContext;
         if (pendingContext && targetContext === pendingContext) {
-            print("Установлен ожидающий контекст: " + pendingContext);
+            print("A pending context has been set: " + pendingContext);
             pendingContext = null;
         }
     } else {
