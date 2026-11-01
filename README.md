@@ -8,11 +8,19 @@ The translation is performed by [this script](https://github.com/nestoris/icon-t
 ## How to use:
 ```
 git clone https://github.com/nestoris/icon-theme-toolkit.git
-cd icon-theme-toolkit_beta
-gjs icon-theme-toolkit.js
+cd icon-theme-toolkit
+gjs icon-theme-toolkit.js [icon_theme_dir]
 ```
+### Or:
+```
+git clone https://github.com/nestoris/icon-theme-toolkit.git
+cd icon-theme-toolkit
+sudo make install
+icon-theme-toolkit [icon_theme_dir]
+```
+
 ## Requirements:
-`GJS, GTK3, icoutils`
+`GJS, GTK3, gdk-pixbuf2, icoutils (optional - for ICO import/export)`
 ## Screenshots:
 Icon themes comparison tab:
 
@@ -40,7 +48,9 @@ ICO import tool:
 
 Symlink matrix tool:
 
-![Symlink matrix tool](symlink-matrix.png)
+![Symlink matrix tool](symlink-matrix-tree.png)
+
+![Symlink matrix tool](symlink-matrix-add-symlink.png)
 
 In-table symlink editing/creaing:
 

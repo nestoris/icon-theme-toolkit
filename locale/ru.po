@@ -1,0 +1,1769 @@
+# Icon Theme Toolkit — Russian translation
+# Generated from translations.txt. Do not edit by hand.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: icon-theme-toolkit\n"
+"Report-Msgid-Bugs-To: https://github.com/nestoris/icon-theme-toolkit/issues\n"
+"POT-Creation-Date: 2026-11-01 04:21+0300\n"
+"PO-Revision-Date: 2026-11-01 04:21+0300\n"
+"Last-Translator: Nestoris <voltasar@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: translations.txt
+msgid "Convert all sizes of the selected name into files"
+msgstr "Преобразовать все размеры выделенного имени в файлы"
+
+#: translations.txt
+msgid "Delete parameter"
+msgstr "Удалить параметр"
+
+#: translations.txt
+msgid "Error loading theme into the editor: "
+msgstr "Ошибка загрузки темы в редактор: "
+
+#: translations.txt
+msgid "Add a name-symlink..."
+msgstr "Добавить имя-симлинк..."
+
+#: translations.txt
+msgid "Edit symlinks: "
+msgstr "Редактировать симлинки: "
+
+#: translations.txt
+msgid "Path to the symlink"
+msgstr "Путь к симлинку"
+
+#: translations.txt
+msgid "Edit existing symlinks..."
+msgstr "Редактировать существующие симлинки..."
+
+#: translations.txt
+msgid "First, select the row with the name in the table."
+msgstr "Сначала выберите строку с именем в таблице."
+
+#: translations.txt
+msgid "Select all available sizes. Upon saving, symlinks will be created (or retained) for the selected cells."
+msgstr "Отметить все доступные размеры. При сохранении для отмеченных ячеек будут созданы (или оставлены) симлинки."
+
+#: translations.txt
+msgid "There are no names referencing the selected file. Use 'Add name/symlink...'"
+msgstr "Нет имён, ссылающихся на выбранный файл. Используйте 'Добавить имя-симлинк...'"
+
+#: translations.txt
+msgid "Scale previews (if disabled, icons are displayed at their actual size)"
+msgstr "Масштабировать превью (если выключено, иконки отображаются в реальном размере)"
+
+#: translations.txt
+msgid "Deselect all"
+msgstr "Снять выделение"
+
+#: translations.txt
+msgid "Clear all checkboxes. Upon saving, all existing symlinks in this matrix will be deleted."
+msgstr "Снять все галочки. При сохранении все существующие симлинки в этой матрице будут удалены."
+
+#: translations.txt
+msgid "The name \"${sName}\" has no symlinks."
+msgstr "У имени \"${sName}\" нет симлинков."
+
+#: translations.txt
+msgid "This name has no symlinks to resolve."
+msgstr "У этого имени нет симлинков для преобразования."
+
+#: translations.txt
+msgid " symlinks to files?"
+msgstr " симлинков в файлы?"
+
+#: translations.txt
+msgid " of new icon:"
+msgstr " нового значка:"
+
+#: translations.txt
+msgid "Original (from a copy)"
+msgstr "Оригинал (из копии)"
+
+#: translations.txt
+msgid "Symlink (and materialize the target)"
+msgstr "Симлинк (и материализовать цель)"
+
+#: translations.txt
+msgid "<b>Symlinks for the selected name</b>"
+msgstr "<b>Симлинки на выбранное имя</b>"
+
+#: translations.txt
+msgid "Symlink matrix for the selected name"
+msgstr "Матрица симлинков на выбранное имя"
+
+#: translations.txt
+msgid "Path pattern:"
+msgstr "Шаблон пути:"
+
+#: translations.txt
+msgid "Path to the symlink being created"
+msgstr "Путь к создаваемому симлинку"
+
+#: translations.txt
+msgid "The file already exists and will be overwritten"
+msgstr "Файл уже существует и будет перезаписан"
+
+#: translations.txt
+msgid "The file will be created"
+msgstr "Файл будет создан"
+
+#: translations.txt
+msgid "Searching for a file for the target: "
+msgstr "Ищем файл для цели: "
+
+#: translations.txt
+msgid "The directory for the symlink does not exist:\\n"
+msgstr "Каталог для симлинка не существует:\\n"
+
+#: translations.txt
+msgid "The original file will be deleted and replaced with a symlink. Continue?"
+msgstr "Оригинальный файл будет удалён и заменён симлинком. Продолжить?"
+
+#: translations.txt
+msgid "The file will be deleted and replaced with a symlink to a "
+msgstr "Файл будет удалён и заменён симлинком на "
+
+#: translations.txt
+msgid "Error changing the target: "
+msgstr "Ошибка изменения цели: "
+
+#: translations.txt
+msgid "Update error after operation: "
+msgstr "Ошибка обновления после операции: "
+
+#: translations.txt
+msgid "Error converting to file: "
+msgstr "Ошибка конвертации в файл: "
+
+#: translations.txt
+msgid "Same format "
+msgstr "Тот же формат "
+
+#: translations.txt
+msgid "Conversion error: "
+msgstr "Ошибка конвертации: "
+
+#: translations.txt
+msgid "The file extension does not match!"
+msgstr "Расширение файла не совпадает!"
+
+#: translations.txt
+msgid "If disabled, icons are displayed at their actual size"
+msgstr "Если выключено, иконки отображаются в реальном размере"
+
+#: translations.txt
+msgid "Usage: "
+msgstr "Использование: "
+
+#: translations.txt
+msgid "Show all names in the topic, including those that consist solely of symlinks (without the actual original files)."
+msgstr "Показывать все имена в теме, включая те, которые состоят только из симлинков (без физических оригиналов)."
+
+#: translations.txt
+msgid "Show symlinks"
+msgstr "Показывать симлинки"
+
+#: translations.txt
+msgid "Make a symlink / Original"
+msgstr "Сделать симлинком / Оригиналом"
+
+#: translations.txt
+msgid "Elements (from top to bottom)"
+msgstr "Элементы (сверху вниз)"
+
+#: translations.txt
+msgid "Add..."
+msgstr "Добавить..."
+
+#: translations.txt
+msgid "Windows .ICO to Linux theme installer"
+msgstr "Установщик значков из .ICO в тему для Linux"
+
+#: translations.txt
+msgid "Save to ICO..."
+msgstr "Сохранить в ICO..."
+
+#: translations.txt
+msgid "Import from ICO..."
+msgstr "Импортировать из ICO..."
+
+#: translations.txt
+msgid "Reload theme"
+msgstr "Перезагрузить тему"
+
+#: translations.txt
+msgid "icon-compiler.js script not found in program folder."
+msgstr "Скрипт icon-compiler.js не найден в папке программы."
+
+#: translations.txt
+msgid "Launch error: "
+msgstr "Ошибка запуска: "
+
+#: translations.txt
+msgid "ICO Compiler"
+msgstr "Компилятор ICO"
+
+#: translations.txt
+msgid "No valid PNG files passed."
+msgstr "Не передано ни одного корректного PNG-файла."
+
+#: translations.txt
+msgid "Icon name:"
+msgstr "Имя значка:"
+
+#: translations.txt
+msgid "name.ico"
+msgstr "имя.ico"
+
+#: translations.txt
+msgid "Preview:"
+msgstr "Просмотр:"
+
+#: translations.txt
+msgid "Only checked"
+msgstr "Только отмеченные"
+
+#: translations.txt
+msgid "Show only checked rows."
+msgstr "Показывать только отмеченные строки."
+
+#: translations.txt
+msgid "Bit depth"
+msgstr "Глубина цвета"
+
+#: translations.txt
+msgid "Create also .ini file"
+msgstr "Создать также .ini файл"
+
+#: translations.txt
+msgid "Save next to ICO an .ini in winico2linuxtheme format ([defaults] and [bit-depth] sections)."
+msgstr "Сохранить рядом с ICO .ini в формате winico2linuxtheme (секции [defaults] и [bit-depth])."
+
+#: translations.txt
+msgid "Save ICO..."
+msgstr "Сохранить ICO..."
+
+#: translations.txt
+msgid "Specify the name of the future ICO file."
+msgstr "Укажите имя будущего ICO-файла."
+
+#: translations.txt
+msgid "No files checked."
+msgstr "Не отмечено ни одного файла."
+
+#: translations.txt
+msgid "Save ICO"
+msgstr "Сохранить ICO"
+
+#: translations.txt
+msgid "Saved: "
+msgstr "Сохранено: "
+
+#: translations.txt
+msgid "icotool exited with an error."
+msgstr "icotool завершился с ошибкой."
+
+#: translations.txt
+msgid "exit code "
+msgstr "код выхода "
+
+#: translations.txt
+msgid "Failed to write ini: "
+msgstr "Не удалось записать ini: "
+
+#: translations.txt
+msgid "icotool not found."
+msgstr "не найден icotool."
+
+#: translations.txt
+msgid "Install: apt install icoutils   (Debian/Ubuntu)"
+msgstr "Установите: apt install icoutils   (Debian/Ubuntu)"
+
+#: translations.txt
+msgid "no PNG files passed."
+msgstr "не передано ни одного PNG-файла."
+
+#: translations.txt
+msgid "View icons from ICO files and install into Linux theme."
+msgstr "Просмотр иконок из ICO-файлов и установка в тему Linux."
+
+#: translations.txt
+msgid "Path to theme index.theme file"
+msgstr "Путь к файлу index.theme темы"
+
+#: translations.txt
+msgid "Context to select (actions, devices, mimetypes, places, etc.)"
+msgstr "Контекст для выбора (actions, devices, mimetypes, places и др.)"
+
+#: translations.txt
+msgid "Icon name without extension"
+msgstr "Имя значка без расширения"
+
+#: translations.txt
+msgid "Icon display size in pixels (default: original)"
+msgstr "Размер отображения значков в пикселях (по умолчанию: оригинальный)"
+
+#: translations.txt
+msgid "Enable smoothing (bilinear interpolation) when scaling"
+msgstr "Включить сглаживание (библинейную интерполяцию) при масштабировании"
+
+#: translations.txt
+msgid "Show this help and exit"
+msgstr "Показать эту справку и выйти"
+
+#: translations.txt
+msgid "ICO_FILE      Path to .ico file to open"
+msgstr "ICO_ФАЙЛ      Путь к .ico файлу для открытия"
+
+#: translations.txt
+msgid "INI file format (created next to ICO):"
+msgstr "Формат INI-файла (создаётся рядом с ICO):"
+
+#: translations.txt
+msgid "scale=128        # display size (optional)"
+msgstr "scale=128        # размер отображения (опционально)"
+
+#: translations.txt
+msgid "blur=true        # scaling smoothing (optional)"
+msgstr "blur=true        # сглаживание при масштабировании (опционально)"
+
+#: translations.txt
+msgid "Available bit depths:"
+msgstr "Доступные глубины цвета:"
+
+#: translations.txt
+msgid "Error: size must be a positive number"
+msgstr "Ошибка: размер должен быть положительным числом"
+
+#: translations.txt
+msgid "INI parse error: "
+msgstr "Ошибка парсинга INI: "
+
+#: translations.txt
+msgid "Failed to read file: "
+msgstr "Не удалось прочитать файл: "
+
+#: translations.txt
+msgid "index.theme parse error: "
+msgstr "Ошибка парсинга index.theme: "
+
+#: translations.txt
+msgid "icotool execution error: "
+msgstr "Ошибка выполнения icotool: "
+
+#: translations.txt
+msgid "ICO parse error: "
+msgstr "Ошибка парсинга ICO: "
+
+#: translations.txt
+msgid "ICO extraction error: "
+msgstr "Ошибка извлечения ICO: "
+
+#: translations.txt
+msgid "Icon name (without extension)..."
+msgstr "Имя значка (без расширения)..."
+
+#: translations.txt
+msgid "No contexts"
+msgstr "Нет контекстов"
+
+#: translations.txt
+msgid "Open ICO file"
+msgstr "Открыть ICO файл"
+
+#: translations.txt
+msgid "Open index.theme file"
+msgstr "Открыть файл index.theme"
+
+#: translations.txt
+msgid "Save parameters to INI file"
+msgstr "Сохранить параметры в INI файл"
+
+#: translations.txt
+msgid "Path to directory..."
+msgstr "Путь к директории..."
+
+#: translations.txt
+msgid "Copy to theme"
+msgstr "Копировать в тему"
+
+#: translations.txt
+msgid "No directory for "
+msgstr "Нет директории для "
+
+#: translations.txt
+msgid "icotool error: "
+msgstr "Ошибка icotool: "
+
+#: translations.txt
+msgid "ICO extraction error: "
+msgstr "Ошибка извлечения ICO: "
+
+#: translations.txt
+msgid "Copied: "
+msgstr "Скопировано: "
+
+#: translations.txt
+msgid "No extracted image to copy"
+msgstr "Нет извлечённого изображения для копирования"
+
+#: translations.txt
+msgid "Destination path not specified"
+msgstr "Не указан путь назначения"
+
+#: translations.txt
+msgid "Copy error: "
+msgstr "Ошибка копирования: "
+
+#: translations.txt
+msgid "Open ICO file first"
+msgstr "Сначала откройте ICO файл"
+
+#: translations.txt
+msgid "Enter icon name"
+msgstr "Введите имя значка"
+
+#: translations.txt
+msgid "INI file saved: "
+msgstr "INI файл сохранён: "
+
+#: translations.txt
+msgid "Error saving INI file"
+msgstr "Ошибка сохранения INI файла"
+
+#: translations.txt
+msgid "Write error: "
+msgstr "Ошибка записи: "
+
+#: translations.txt
+msgid "Opened ICO: "
+msgstr "Открыт ICO: "
+
+#: translations.txt
+msgid "Found formats and bit depths:"
+msgstr "Найденные форматы и глубины цвета:"
+
+#: translations.txt
+msgid "Display size from INI: "
+msgstr "Размер отображения из INI: "
+
+#: translations.txt
+msgid "Display size from arguments: "
+msgstr "Размер отображения из аргументов: "
+
+#: translations.txt
+msgid "Smoothing enabled from INI"
+msgstr "Сглаживание включено из INI"
+
+#: translations.txt
+msgid "Smoothing enabled from arguments"
+msgstr "Сглаживание включено из аргументов"
+
+#: translations.txt
+msgid "Loaded INI file: "
+msgstr "Загружен INI файл: "
+
+#: translations.txt
+msgid "Context set: "
+msgstr "Контекст установлен: "
+
+#: translations.txt
+msgid "Context ' "
+msgstr "Контекст ' "
+
+#: translations.txt
+msgid "' not found in theme"
+msgstr "' не найден в теме"
+
+#: translations.txt
+msgid "' will be set after theme loading"
+msgstr "' будет установлен после загрузки темы"
+
+#: translations.txt
+msgid "Variables: "
+msgstr "Переменные: "
+
+#: translations.txt
+msgid "Loading theme from arguments: "
+msgstr "Загрузка темы из аргументов: "
+
+#: translations.txt
+msgid "Theme file not found: "
+msgstr "Файл темы не найден: "
+
+#: translations.txt
+msgid "Loading ICO from arguments: "
+msgstr "Загрузка ICO из аргументов: "
+
+#: translations.txt
+msgid "ICO file not found: "
+msgstr "ICO файл не найден: "
+
+#: translations.txt
+msgid "Loading theme: "
+msgstr "Загрузка темы: "
+
+#: translations.txt
+msgid "Contexts found:"
+msgstr "Найдены контексты:"
+
+#: translations.txt
+msgid "Choose ICO file"
+msgstr "Выберите ICO файл"
+
+#: translations.txt
+msgid "ICO files"
+msgstr "ICO файлы"
+
+#: translations.txt
+msgid "Cancel"
+msgstr "Отмена"
+
+#: translations.txt
+msgid "Open"
+msgstr "Открыть"
+
+#: translations.txt
+msgid "Choose index.theme file"
+msgstr "Выберите файл index.theme"
+
+#: translations.txt
+msgid "index.theme files"
+msgstr "Файлы index.theme"
+
+#: translations.txt
+msgid "Created %d symlink(s)"
+msgstr "Создано %d симлинк(ов)"
+
+#: translations.txt
+msgid "Created %d symlink(s) with %d error(s)"
+msgstr "Создано %d симлинк(ов) с %d ошибкой(ами)"
+
+#: translations.txt
+msgid "Choose master file"
+msgstr "Выберите master-файл"
+
+#: translations.txt
+msgid "Choose a file to become the master. Other files in this context will become symlinks to it."
+msgstr "Выберите файл, который станет мастером. Другие файлы в этом контексте станут симлинками на него."
+
+#: translations.txt
+msgid "Convert %d symlinks to physical files?"
+msgstr "Преобразовать %d симлинков в физические файлы?"
+
+#: translations.txt
+msgid "Each symlink will be replaced with a copy of its target file."
+msgstr "Каждый симлинк будет заменён копией файла-цели."
+
+#: translations.txt
+msgid "Fix %d symlink chains?"
+msgstr "Исправить %d цепочек симлинков?"
+
+#: translations.txt
+msgid "Each symlink pointing to another symlink will be retargeted directly to the final file."
+msgstr "Каждый симлинк, указывающий на другой симлинк, будет перенаправлен напрямую на конечный файл."
+
+#: translations.txt
+msgid "Delete %d broken symlinks?"
+msgstr "Удалить %d битых симлинков?"
+
+#: translations.txt
+msgid "Errors:"
+msgstr "Ошибки:"
+
+#: translations.txt
+msgid "Chain"
+msgstr "Цепочка"
+
+#: translations.txt
+msgid "Files in this context"
+msgstr "Файлы в этом контексте"
+
+#: translations.txt
+msgid "Referenced by"
+msgstr "Ссылаются на"
+
+#: translations.txt
+msgid "Physical file"
+msgstr "Физический файл"
+
+#: translations.txt
+msgid "Referrer"
+msgstr "Реферер"
+
+#: translations.txt
+msgid "Icon"
+msgstr "Иконка"
+
+#: translations.txt
+msgid "No physical files in this context. Cannot choose a master."
+msgstr "Нет физических файлов в этом контексте. Невозможно выбрать master."
+
+#: translations.txt
+msgid "Converted %d files to symlinks"
+msgstr "Преобразовано %d файлов в симлинки"
+
+#: translations.txt
+msgid "Converted %d symlinks to files"
+msgstr "Преобразовано %d симлинков в файлы"
+
+#: translations.txt
+msgid "Unchain"
+msgstr "Развернуть цепочки"
+
+#: translations.txt
+msgid "Fixed %d chains"
+msgstr "Исправлено %d цепочек"
+
+#: translations.txt
+msgid "Remove broken"
+msgstr "Удалить битые"
+
+#: translations.txt
+msgid "Removed %d broken symlinks"
+msgstr "Удалено %d битых симлинков"
+
+#: translations.txt
+msgid "No symlinks in this context."
+msgstr "Нет симлинков в этом контексте."
+
+#: translations.txt
+msgid "No symlink chains."
+msgstr "Нет цепочек симлинков."
+
+#: translations.txt
+msgid "No broken symlinks in this context."
+msgstr "Нет битых симлинков в этом контексте."
+
+#: translations.txt
+msgid "Compile ICO..."
+msgstr "Скомпилировать ICO..."
+
+#: translations.txt
+msgid "Compile icon files from this window into ICO. If rows are selected, only those will be passed."
+msgstr "Скомпилировать файлы значков из этого окна в ICO. Если выбраны строки, будут переданы только они."
+
+#: translations.txt
+msgid "icotool is not installed. Install the \"icoutils\" package."
+msgstr "icotool не установлен. Установите пакет \"icoutils\"."
+
+#: translations.txt
+msgid "Refresh"
+msgstr "Обновить"
+
+#: translations.txt
+msgid "Re-read files and symlinks of this icon from disk, then rebuild the index."
+msgstr "Перечитать файлы и симлинки этого значка с диска, затем перестроить индекс."
+
+#: translations.txt
+msgid "Close this window. Applied changes remain on disk."
+msgstr "Закрыть это окно. Уже примененные изменения останутся на диске."
+
+#: translations.txt
+msgid "Properties: %s"
+msgstr "Свойства: %s"
+
+#: translations.txt
+msgid "No files to compile."
+msgstr "Нет файлов для компиляции."
+
+#: translations.txt
+msgid "Available bit depths:"
+msgstr "Доступные глубины цвета:"
+
+#: translations.txt
+msgid "Refresh"
+msgstr "Обновить"
+
+#: translations.txt
+msgid "Properties:"
+msgstr "Свойства:"
+
+#: translations.txt
+msgid "Properties: %s"
+msgstr "Свойства: %s"
+
+#: translations.txt
+msgid "Symlinks Matrix"
+msgstr "Матрица симлинков"
+
+#: translations.txt
+msgid "Failed to open path: "
+msgstr "Не удалось открыть путь: "
+
+#: translations.txt
+msgid "Add system themes"
+msgstr "Добавить системные темы"
+
+#: translations.txt
+msgid "Cancel"
+msgstr "Отмена"
+
+#: translations.txt
+msgid "Add selected"
+msgstr "Добавить выбранные"
+
+#: translations.txt
+msgid "Select one or more system themes to add:"
+msgstr "Выберите одну или несколько системных тем для добавления:"
+
+#: translations.txt
+msgid "Preview"
+msgstr "Превью"
+
+#: translations.txt
+msgid "Name"
+msgstr "Название"
+
+#: translations.txt
+msgid "Path"
+msgstr "Путь"
+
+#: translations.txt
+msgid "Please wait"
+msgstr "Пожалуйста, подождите"
+
+#: translations.txt
+msgid "Preparing..."
+msgstr "Подготовка..."
+
+#: translations.txt
+msgid "Broken symlinks: "
+msgstr "Битые симлинки: "
+
+#: translations.txt
+msgid "Find targets"
+msgstr "Найти цели"
+
+#: translations.txt
+msgid "Save selected"
+msgstr "Сохранить выбранное"
+
+#: translations.txt
+msgid "Target (relative to symlink)"
+msgstr "Цель (относительно симлинка)"
+
+#: translations.txt
+msgid "Choose target file"
+msgstr "Выберите файл-цель"
+
+#: translations.txt
+msgid "Select"
+msgstr "Выбрать"
+
+#: translations.txt
+msgid "Error writing symlink "
+msgstr "Ошибка записи симлинка "
+
+#: translations.txt
+msgid "Deadlinks marked with found targets: "
+msgstr "Отмечено дэдлинков с найденными целями: "
+
+#: translations.txt
+msgid "Automatically fixed (1 variant): "
+msgstr "Автоматически исправлено (был 1 вариант): "
+
+#: translations.txt
+msgid "Click the «Target» cell to choose from multiple variants."
+msgstr "Кликните по ячейке «Цель», чтобы выбрать из нескольких вариантов."
+
+#: translations.txt
+msgid "No suitable targets found."
+msgstr "Подходящих целей не найдено."
+
+#: translations.txt
+msgid "Icon Theme Toolkit"
+msgstr "Icon Theme Toolkit"
+
+#: translations.txt
+msgid "Comparison"
+msgstr "Сравнение"
+
+#: translations.txt
+msgid "Theme Editor"
+msgstr "Редактор темы"
+
+#: translations.txt
+msgid "Tools"
+msgstr "Инструменты"
+
+#: translations.txt
+msgid "Size Synchronization"
+msgstr "Синхронизация размеров"
+
+#: translations.txt
+msgid "Apply"
+msgstr "Применить"
+
+#: translations.txt
+msgid "Save"
+msgstr "Сохранить"
+
+#: translations.txt
+msgid "Manage symlinks to "
+msgstr "Управление симлинками на "
+
+#: translations.txt
+msgid "Overwrite files"
+msgstr "Перезаписывать файлы"
+
+#: translations.txt
+msgid "Select all"
+msgstr "Выбрать все"
+
+#: translations.txt
+msgid "File (busy)"
+msgstr "Файл (занято)"
+
+#: translations.txt
+msgid "Will be overwritten"
+msgstr "Будет перезаписан"
+
+#: translations.txt
+msgid " (chain)"
+msgstr " (цепочка)"
+
+#: translations.txt
+msgid "Number of originals to be materialized: "
+msgstr "Будет материализовано оригиналов: "
+
+#: translations.txt
+msgid "Symlinks to create: "
+msgstr "Будет создано симлинков: "
+
+#: translations.txt
+msgid "Symlinks/Originals: "
+msgstr "Симлинки/Оригиналы: "
+
+#: translations.txt
+msgid "Files/symlinks to delete: "
+msgstr "Будет удалено файлов/симлинков: "
+
+#: translations.txt
+msgid "Continue?"
+msgstr "Продолжить?"
+
+#: translations.txt
+msgid "Saving changes"
+msgstr "Сохранение изменений"
+
+#: translations.txt
+msgid "Updating files..."
+msgstr "Обновление файлов..."
+
+#: translations.txt
+msgid "Deleting: "
+msgstr "Удаление: "
+
+#: translations.txt
+msgid "Creating: "
+msgstr "Создание: "
+
+#: translations.txt
+msgid "Completed with errors: "
+msgstr "Завершено с ошибками: "
+
+#: translations.txt
+msgid "Delete files"
+msgstr "Удалить файлы"
+
+#: translations.txt
+msgid "Delete selected"
+msgstr "Удалить выбранное"
+
+#: translations.txt
+msgid "Files for name: "
+msgstr "Файлы для имени: "
+
+#: translations.txt
+msgid "Context"
+msgstr "Контекст"
+
+#: translations.txt
+msgid "Directory"
+msgstr "Каталог"
+
+#: translations.txt
+msgid "Size"
+msgstr "Размер"
+
+#: translations.txt
+msgid "Status"
+msgstr "Статус"
+
+#: translations.txt
+msgid "Target"
+msgstr "Цель"
+
+#: translations.txt
+msgid "Error deleting "
+msgstr "Ошибка удаления "
+
+#: translations.txt
+msgid "Add theme..."
+msgstr "Добавить тему..."
+
+#: translations.txt
+msgid "System themes..."
+msgstr "Системные темы..."
+
+#: translations.txt
+msgid "Settings"
+msgstr "Настройки"
+
+#: translations.txt
+msgid "Filter:"
+msgstr "Фильтр:"
+
+#: translations.txt
+msgid "Search icon..."
+msgstr "Поиск значка..."
+
+#: translations.txt
+msgid "Only in main"
+msgstr "Только в главной"
+
+#: translations.txt
+msgid "Not in main"
+msgstr "Нет в главной"
+
+#: translations.txt
+msgid "In all except main"
+msgstr "Есть во всех, кроме главной"
+
+#: translations.txt
+msgid "Select a theme directory or "
+msgstr "Выберите каталог темы или "
+
+#: translations.txt
+msgid "Collecting icons data..."
+msgstr "Сбор данных о значках..."
+
+#: translations.txt
+msgid "missing on the disk"
+msgstr "отсутствует на диске"
+
+#: translations.txt
+msgid "contains spaces"
+msgstr "содержит пробелы"
+
+#: translations.txt
+msgid "Icon name"
+msgstr "Имя значка"
+
+#: translations.txt
+msgid "Themes"
+msgstr "Темы"
+
+#: translations.txt
+msgid "Contexts"
+msgstr "Контексты"
+
+#: translations.txt
+msgid "Select icon"
+msgstr "Выберите значок"
+
+#: translations.txt
+msgid "Files"
+msgstr "Файлы"
+
+#: translations.txt
+msgid "Theme"
+msgstr "Тема"
+
+#: translations.txt
+msgid "Type"
+msgstr "Тип"
+
+#: translations.txt
+msgid "Visual"
+msgstr "Визуально"
+
+#: translations.txt
+msgid "Preview size:"
+msgstr "Размер превью:"
+
+#: translations.txt
+msgid "Search by name..."
+msgstr "Поиск по имени..."
+
+#: translations.txt
+msgid "Name"
+msgstr "Имя"
+
+#: translations.txt
+msgid "Symlinks"
+msgstr "Симлинков"
+
+#: translations.txt
+msgid "Delete some files"
+msgstr "Удалить часть файлов"
+
+#: translations.txt
+msgid "Move/Copy/Rename"
+msgstr "Переместить/Копировать/Переименовать"
+
+#: translations.txt
+msgid "Make symlink to another name"
+msgstr "Сделать симлинком на другое имя"
+
+#: translations.txt
+msgid "Files of selected name"
+msgstr "Файлы выбранного имени"
+
+#: translations.txt
+msgid "Symlinks to selected name"
+msgstr "Симлинки на выбранное имя"
+
+#: translations.txt
+msgid "As list"
+msgstr "Списком"
+
+#: translations.txt
+msgid "By name"
+msgstr "Поимённо"
+
+#: translations.txt
+msgid "Symlink name"
+msgstr "Имя симлинка"
+
+#: translations.txt
+msgid "Address"
+msgstr "Адрес"
+
+#: translations.txt
+msgid "Synchronize sizes..."
+msgstr "Синхронизировать размеры..."
+
+#: translations.txt
+msgid "Select at least one name in the top table."
+msgstr "Выберите хотя бы одно имя в верхней таблице."
+
+#: translations.txt
+msgid "Count"
+msgstr "Кол-во"
+
+#: translations.txt
+msgid "Processing theme "
+msgstr "Обработка темы "
+
+#: translations.txt
+msgid "Building table..."
+msgstr "Построение таблицы..."
+
+#: translations.txt
+msgid "Building rows "
+msgstr "Построение строк "
+
+#: translations.txt
+msgid "Missing in "
+msgstr "Нет в "
+
+#: translations.txt
+msgid " themes"
+msgstr " темах"
+
+#: translations.txt
+msgid "Symlinks only"
+msgstr "Только симлинки"
+
+#: translations.txt
+msgid "Has symlinks"
+msgstr "Есть симлинки"
+
+#: translations.txt
+msgid "Updating statuses..."
+msgstr "Обновление статусов..."
+
+#: translations.txt
+msgid "Updating "
+msgstr "Обновление "
+
+#: translations.txt
+msgid "Missing:"
+msgstr "Отсутствует:"
+
+#: translations.txt
+msgid "Has symlinks:"
+msgstr "Есть симлинки:"
+
+#: translations.txt
+msgid "Symlinks only:"
+msgstr "Только симлинки:"
+
+#: translations.txt
+msgid "Preview size (Visual):"
+msgstr "Размер превью (Visual):"
+
+#: translations.txt
+msgid "Main theme"
+msgstr "Главная тема"
+
+#: translations.txt
+msgid "Open directory"
+msgstr "Открыть каталог"
+
+#: translations.txt
+msgid "Make main"
+msgstr "Сделать главной"
+
+#: translations.txt
+msgid "Changing main theme"
+msgstr "Смена главной темы"
+
+#: translations.txt
+msgid "Reconfiguring data..."
+msgstr "Перенастройка данных..."
+
+#: translations.txt
+msgid "Loading theme"
+msgstr "Загрузка темы"
+
+#: translations.txt
+msgid "Loading "
+msgstr "Загрузка "
+
+#: translations.txt
+msgid "Failed to load theme (possibly a cursor theme): "
+msgstr "Не удалось загрузить тему (возможно, это тема курсоров): "
+
+#: translations.txt
+msgid "Main parameters"
+msgstr "Основные параметры"
+
+#: translations.txt
+msgid "Name:"
+msgstr "Имя:"
+
+#: translations.txt
+msgid "Comment:"
+msgstr "Комментарий:"
+
+#: translations.txt
+msgid "Example:"
+msgstr "Пример:"
+
+#: translations.txt
+msgid "Preview:"
+msgstr "Предпросмотр:"
+
+#: translations.txt
+msgid "Localization..."
+msgstr "Локализация..."
+
+#: translations.txt
+msgid "Edit Inherits..."
+msgstr "Изменить Inherits..."
+
+#: translations.txt
+msgid "Current: not set"
+msgstr "Текущее: не задано"
+
+#: translations.txt
+msgid "Edit Directories..."
+msgstr "Изменить Directories..."
+
+#: translations.txt
+msgid "Directories (index.theme)"
+msgstr "Каталоги (index.theme)"
+
+#: translations.txt
+msgid "Problems"
+msgstr "Проблемы"
+
+#: translations.txt
+msgid "Select a directory in the list above"
+msgstr "Выберите каталог в списке выше"
+
+#: translations.txt
+msgid "Add parameter"
+msgstr "Добавить параметр"
+
+#: translations.txt
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: translations.txt
+msgid "Fix problem"
+msgstr "Исправить проблему"
+
+#: translations.txt
+msgid "Create directory"
+msgstr "Создать каталог"
+
+#: translations.txt
+msgid "Delete directory"
+msgstr "Удалить каталог"
+
+#: translations.txt
+msgid "Problems ("
+msgstr "Проблемы ("
+
+#: translations.txt
+msgid "Apply text to table"
+msgstr "Применить текст к таблице"
+
+#: translations.txt
+msgid "Save to disk"
+msgstr "Сохранить на диск"
+
+#: translations.txt
+msgid "Reset"
+msgstr "Сбросить"
+
+#: translations.txt
+msgid "Text successfully applied to the left panel."
+msgstr "Текст успешно применен к левой панели."
+
+#: translations.txt
+msgid "File index.theme successfully saved!"
+msgstr "Файл index.theme успешно сохранен!"
+
+#: translations.txt
+msgid "Save error: "
+msgstr "Ошибка сохранения: "
+
+#: translations.txt
+msgid "Add section"
+msgstr "Добавить секцию"
+
+#: translations.txt
+msgid "Context:"
+msgstr "Контекст (Context):"
+
+#: translations.txt
+msgid "Size:"
+msgstr "Размер (Size):"
+
+#: translations.txt
+msgid "Scale:"
+msgstr "Масштаб (Scale):"
+
+#: translations.txt
+msgid "Variant (folder):"
+msgstr "Вариант (папка):"
+
+#: translations.txt
+msgid "e.g. symbolic"
+msgstr "например, symbolic"
+
+#: translations.txt
+msgid "Type:"
+msgstr "Тип (Type):"
+
+#: translations.txt
+msgid "Resulting path:"
+msgstr "Итоговый путь:"
+
+#: translations.txt
+msgid "Error creating directory: "
+msgstr "Ошибка создания папки: "
+
+#: translations.txt
+msgid "Error creating symlink: "
+msgstr "Ошибка создания симлинка: "
+
+#: translations.txt
+msgid "Directory "
+msgstr "Каталог "
+
+#: translations.txt
+msgid " created and added to index.theme."
+msgstr " создан и добавлен в index.theme."
+
+#: translations.txt
+msgid "Create empty directory \""
+msgstr "Создать пустой каталог \""
+
+#: translations.txt
+msgid "\" on disk?"
+msgstr "\" на диске?"
+
+#: translations.txt
+msgid "Error: "
+msgstr "Ошибка: "
+
+#: translations.txt
+msgid "Add directory \""
+msgstr "Внести каталог \""
+
+#: translations.txt
+msgid "\" to Directories list?"
+msgstr "\" в список Directories?"
+
+#: translations.txt
+msgid "Auto-fix for spaces is not implemented yet."
+msgstr "Автоисправление пробелов пока не реализовано."
+
+#: translations.txt
+msgid "Delete directory \""
+msgstr "Удалить каталог \""
+
+#: translations.txt
+msgid "It will be removed from Directories list and text sections. The physical folder on disk is not deleted."
+msgstr "Он будет удален из списка Directories и секций в тексте. Физическая папка на диске не удаляется."
+
+#: translations.txt
+msgid " removed from text."
+msgstr " удален из текста."
+
+#: translations.txt
+msgid "Find replacement for \""
+msgstr "Найти замену для \""
+
+#: translations.txt
+msgid "Delete broken symlink"
+msgstr "Удалить битый симлинк"
+
+#: translations.txt
+msgid "Ignore (stub)"
+msgstr "Игнорировать (заглушка)"
+
+#: translations.txt
+msgid "Broken symlinks"
+msgstr "Битые симлинки"
+
+#: translations.txt
+msgid "Spaces"
+msgstr "Пробелы"
+
+#: translations.txt
+msgid "Not on disk"
+msgstr "Нет на диске"
+
+#: translations.txt
+msgid "Not in Directories"
+msgstr "Нет в Directories"
+
+#: translations.txt
+msgid "No section"
+msgstr "Нет секции"
+
+#: translations.txt
+msgid "Other"
+msgstr "Другое"
+
+#: translations.txt
+msgid "Broken symlink"
+msgstr "Битый симлинк"
+
+#: translations.txt
+msgid "Parameters: "
+msgstr "Параметры: "
+
+#: translations.txt
+msgid "Broken symlinks ("
+msgstr "Битые симлинки ("
+
+#: translations.txt
+msgid "Spaces in names ("
+msgstr "Пробелы в именах ("
+
+#: translations.txt
+msgid "Failed to find section "
+msgstr "Не удалось найти секцию "
+
+#: translations.txt
+msgid " in text."
+msgstr " в тексте."
+
+#: translations.txt
+msgid "Section ["
+msgstr "Секция ["
+
+#: translations.txt
+msgid "] updated in text."
+msgstr "] обновлена в тексте."
+
+#: translations.txt
+msgid "Language (Code)"
+msgstr "Язык (Код)"
+
+#: translations.txt
+msgid "Move up"
+msgstr "Переместить вверх"
+
+#: translations.txt
+msgid "Move down"
+msgstr "Переместить вниз"
+
+#: translations.txt
+msgid "Add language"
+msgstr "Добавить язык"
+
+#: translations.txt
+msgid "Delete"
+msgstr "Удалить"
+
+#: translations.txt
+msgid "Add..."
+msgstr "Добавить..."
+
+#: translations.txt
+msgid "Add "
+msgstr "Добавить "
+
+#: translations.txt
+msgid "Items (top to bottom) "
+msgstr "Элементы (сверху вниз) "
+
+#: translations.txt
+msgid "Localization updated in text."
+msgstr "Локализация обновлена в тексте."
+
+#: translations.txt
+msgid "Path to theme directory or index.theme file."
+msgstr "Путь к каталогу темы или файлу index.theme."
+
+#: translations.txt
+msgid "If not specified, the comparison tab opens."
+msgstr "Если не указан, открывается вкладка сравнения."
+
+#: translations.txt
+msgid "Show this help and exit"
+msgstr "Показать эту справку и выйти"
+
+#: translations.txt
+msgid "Options:"
+msgstr "Опции:"
+
+#: translations.txt
+msgid "Arguments:"
+msgstr "Аргументы:"
+
+#: translations.txt
+msgid "Usage: gjs icon-theme-toolkit.js [options] [theme_path]"
+msgstr "Использование: gjs icon-theme-toolkit.js [опции] [путь_к_теме]"
+
+#: translations.txt
+msgid "Failed to load theme."
+msgstr "Не удалось загрузить тему."
+
+#: translations.txt
+msgid "Read error: "
+msgstr "Ошибка чтения: "
+
+#: translations.txt
+msgid "Load error: "
+msgstr "Ошибка загрузки: "
+
+#: translations.txt
+msgid "Loading cancelled by user."
+msgstr "Загрузка отменена пользователем."
+
+#: translations.txt
+msgid "This is a cursor theme. The icon editor does not support it."
+msgstr "Это тема курсоров. Редактор значков не поддерживает её."
+
+#: translations.txt
+msgid "Failed to read file"
+msgstr "Не удалось прочитать файл"
+
+#: translations.txt
+msgid "File contains CRLF. LF is recommended."
+msgstr "Файл содержит CRLF. Рекомендуется LF."
+
+#: translations.txt
+msgid "File contains BOM."
+msgstr "Файл содержит BOM."
+
+#: translations.txt
+msgid "Missing section ["
+msgstr "Отсутствует секция ["
+
+#: translations.txt
+msgid "] in index.theme."
+msgstr "] в index.theme."
+
+#: translations.txt
+msgid "\" contains spaces."
+msgstr "\" содержит пробелы."
+
+#: translations.txt
+msgid "Parse error: "
+msgstr "Ошибка парсинга: "
+
+#: translations.txt
+msgid "\" is missing from Directories."
+msgstr "\" отсутствует в Directories."
+
+#: translations.txt
+msgid "Scanning "
+msgstr "Сканирование "
+
+#: translations.txt
+msgid "\" is missing on disk."
+msgstr "\" отсутствует на диске."
+
+#: translations.txt
+msgid "\" contains spaces."
+msgstr "\" содержит пробелы."
+
+#: translations.txt
+msgid "Broken symlink: "
+msgstr "Битый симлинк: "
+
+#: translations.txt
+msgid "Settings save error: "
+msgstr "Ошибка сохранения настроек: "
+
+#: translations.txt
+msgid "icotool not installed (install the icoutils package)"
+msgstr "icotool не установлен (установите пакет icoutils)"
+
+#: translations.txt
+msgid "Program icotool not found. Install the icoutils package."
+msgstr "Программа icotool не найдена. Установите пакет icoutils."
+
+#: translations.txt
+msgid "icon-compiler.js script not found in the program folder."
+msgstr "Скрипт icon-compiler.js не найден в папке программы."
+
+#: translations.txt
+msgid "winico2linuxtheme.js script not found in the program folder."
+msgstr "Скрипт winico2linuxtheme.js не найден в папке программы."
+
+#: translations.txt
+msgid "First select an icon name in the left table."
+msgstr "Сначала выберите имя значка в левой таблице."
+
+#: translations.txt
+msgid "This icon has no physical files (only symlinks)."
+msgstr "У этого значка нет физических файлов (только симлинки)."
+
+#: translations.txt
+msgid "Launch error: "
+msgstr "Ошибка запуска: "
+
+#: translations.txt
+msgid "Create"
+msgstr "Создать"
+
+#: translations.txt
+msgid "Show all"
+msgstr "Показать все"
+
+#: translations.txt
+msgid "/path/to/"
+msgstr "/путь/к/"
+
+#: translations.txt
+msgid "path_to_theme"
+msgstr "путь_к_теме"
+
+#: translations.txt
+msgid "Add"
+msgstr "Добавить"
+
+#: translations.txt
+msgid "Target directory"
+msgstr "Каталог цели"
+
+#: translations.txt
+msgid "Target context"
+msgstr "Контекст цели"
+
+#: translations.txt
+msgid "Updated: "
+msgstr "Обновлено: "
+
+#: translations.txt
+msgid "Scale"
+msgstr "Масштабировать"
+
+#: translations.txt
+msgid "Custom background"
+msgstr "Свой фон"
+
+#: translations.txt
+msgid "FILE"
+msgstr "ФАЙЛ"
+
+#: translations.txt
+msgid "CONTEXT"
+msgstr "КОНТЕКСТ"
+
+#: translations.txt
+msgid "NAME"
+msgstr "ИМЯ"
+
+#: translations.txt
+msgid "SIZE"
+msgstr "РАЗМЕР"
+
+#: translations.txt
+msgid "icon"
+msgstr "иконка"
+
+#: translations.txt
+msgid "File"
+msgstr "Файл"
+
+#: translations.txt
+msgid "file"
+msgstr "файл"
+
+#: translations.txt
+msgid "Close"
+msgstr "Закрыть"
+
+#: translations.txt
+msgid "Symlink"
+msgstr "Симлинк"
+
+#: translations.txt
+msgid "symlink"
+msgstr "симлинк"
+
+#: translations.txt
+msgid " of "
+msgstr " из "
+
+#: translations.txt
+msgid "All"
+msgstr "Все"
+
+#: translations.txt
+msgid "Convert "
+msgstr "Преобразовать "
+
+#: translations.txt
+msgid "Errors: "
+msgstr "Ошибок: "
+
+#: translations.txt
+msgid "Created: "
+msgstr "Создано: "
+
+#: translations.txt
+msgid "Source file"
+msgstr "Исходный файл"
+
+#: translations.txt
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: translations.txt
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: translations.txt
+msgid "Reload"
+msgstr "Перезагрузка"
+
+#: translations.txt
+msgid "Current: "
+msgstr "Текущее: "
+
+#: translations.txt
+msgid "Add name-symlink"
+msgstr "Добавить имя-симлинк"
+
+#: translations.txt
+msgid "not specified"
+msgstr "не задано"
+
+#: translations.txt
+msgid "Localization"
+msgstr "Локализация"
+
+#: translations.txt
+msgid "Original"
+msgstr "Оригинал"
+
+#: translations.txt
+msgid "symlinks"
+msgstr "симлинки"
+
+#: translations.txt
+msgid "symlink"
+msgstr "симлинку"
+
+#: translations.txt
+msgid "Action"
+msgstr "Действие"
+
+#: translations.txt
+msgid "Mono"
+msgstr "Моно"
+
+#: translations.txt
+msgid "Save next to the .ico file in the winico2linuxtheme format "
+msgstr "Сохранить рядом с ICO .ini в формате winico2linuxtheme "
+
+#: translations.txt
+msgid "(sections [defaults] and [bit-depth])."
+msgstr "(секции [defaults] и [bit-depth])."
+
+#: translations.txt
+msgid "Usage: gjs test-theme.js /path/to/theme"
+msgstr "Использование: gjs test-theme.js /путь/к/теме"
+
+#: translations.txt
+msgid "LOADING ERROR:"
+msgstr "ОШИБКА ЗАГРУЗКИ:"
+
+#: translations.txt
+msgid "Critical error: "
+msgstr "Критическая ошибка: "
+
+#: translations.txt
+msgid "Parsing index.theme..."
+msgstr "Парсинг index.theme..."
+
+#: translations.txt
+msgid "Done"
+msgstr "Готово"
+
+#: translations.txt
+msgid " [OPTIONS] [ICO_FILE]\\n"
+msgstr " [ОПЦИИ] [ICO_ФАЙЛ]\\n"
+
+#: translations.txt
+msgid "Examples:"
+msgstr "Примеры:"
+
+#: translations.txt
+msgid "' mapped to folder '"
+msgstr "' сопоставлен с папкой '"
+
+#: translations.txt
+msgid "Theme loaded: "
+msgstr "Загружена тема: "
+
+#: translations.txt
+msgid "A pending context has been set: "
+msgstr "Установлен ожидающий контекст: "
+
+#: translations.txt
+msgid "Physically delete files and symlinks for the selected name"
+msgstr "Физически удалить файлы и симлинки выделенного имени"
+
+#: translations.txt
+msgid "Delete ALL files and symlinks for the name \"${sName}\"?\\n\\nNumber of objects to be deleted: ${sOccs.length}. This action cannot be undone."
+msgstr "Удалить ВСЕ файлы и симлинки для имени \"${sName}\"?\\n\\nБудет удалено объектов: ${sOccs.length}. Это действие необратимо."
+
+#: translations.txt
+msgid "Deleted: ${deleted}\\nErrors: ${errors}"
+msgstr "Удалено: ${deleted}\\nОшибок: ${errors}"
+
+#: translations.txt
+msgid "Symlink chains"
+msgstr "Цепочки симлинков"
+
+#: translations.txt
+msgid "Broken symlink (target does not exist)"
+msgstr "Битый симлинк (цель не существует)"
+
+#: translations.txt
+msgid "Everything is fine"
+msgstr "Всё в порядке"
+
