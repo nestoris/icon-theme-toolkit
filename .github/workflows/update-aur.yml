@@ -26,15 +26,33 @@ jobs:
         env:
           AUR_SSH_KEY: ${{ secrets.AUR_SSH_KEY }}
         run: |
-          cd packaging
+          # 1. Настраиваем SSH
           mkdir -p ~/.ssh
           echo "$AUR_SSH_KEY" > ~/.ssh/aur
           chmod 600 ~/.ssh/aur
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/aur
           ssh-keyscan -H aur.archlinux.org >> ~/.ssh/known_hosts
-          git init  # если ещё не git-репозиторий
-          git remote add aur ssh://aur@aur.archlinux.org/icon-theme-toolkit.git || true
+
+          # 2. Клонируем существующий репозиторий AUR во временную папку
+          git clone ssh://aur@aur.archlinux.org/icon-theme-toolkit.git aur-repo
+          cd aur-repo
+
+          # 3. Копируем туда наш PKGBUILD
+          cp ../packaging/PKGBUILD .
+
+          # 4. Генерируем .SRCINFO прямо здесь (на всякий случай, если скрипт не сделал)
+          makepkg --printsrcinfo > .SRCINFO
+
+          # 5. Коммитим и пушим, если есть изменения
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
           git add PKGBUILD .SRCINFO
-          git commit -m "Update to latest release" || true
-          git push aur master
+          
+          # Проверяем, есть ли изменения (если версия та же, коммит не нужен)
+          if git diff-index --quiet HEAD; then
+            echo "Нет изменений для пуша в AUR."
+          else
+            git commit -m "Update to latest release"
+            git push origin master
+          fi

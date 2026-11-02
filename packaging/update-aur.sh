@@ -65,4 +65,7 @@ makepkg --printsrcinfo > .SRCINFO
 # git commit -m "Update to $NEW_VER"
 # git push
 
+# 5. Генерируем .SRCINFO (даже если версия не менялась)
+makepkg --printsrcinfo > .SRCINFO
+
 echo "Готово. Проверьте PKGBUILD и .SRCINFO."
