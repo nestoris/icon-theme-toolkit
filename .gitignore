@@ -1,3 +1,10 @@
 icon-theme-toolkit.tar.bz2
 release-notes.sh
 packaging/.SRCINFO
+packaging/*.bak.*
+packaging/src/
+packaging/pkg/
+*.tar.gz
+*.deb
+*.rpm
+*.tar.zst
