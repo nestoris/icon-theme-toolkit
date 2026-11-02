@@ -8,16 +8,17 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    container:
+      image: archlinux:base-devel
 
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y jq curl gettext makepkg
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
 
       - name: Update PKGBUILD and .SRCINFO
         run: |
+          # Устанавливаем зависимости, если нужно (например, openssh для git)
+          pacman -Sy --noconfirm git openssh
           cd packaging
           ./update-aur.sh
 
