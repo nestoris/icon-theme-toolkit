@@ -18,7 +18,7 @@ jobs:
       - name: Update PKGBUILD and .SRCINFO
         run: |
           # Устанавливаем зависимости, если нужно (например, openssh для git)
-          pacman -Sy --noconfirm git openssh
+          pacman -Sy --noconfirm git jq
           cd packaging
           ./update-aur.sh
 
